@@ -39,18 +39,39 @@
     <div class="welcome-text"> 
 
         <h2>
-             großer text</h2>
+             Spenden an: [Tier]</h2>
 
-        <h3> <br> <br> das wird mal die about spenden 3 page</h3>
+        <h3> <br> <br> Bitte geben Sie an, wieviel Sie spenden wollen.</h3>
         
         <!--Textparagraph -->
         <p>
            <br>
-            text
-            <br> text 
-        </p>
 
-        <!--Button für Login-->   
+           <form action="/spenden_3" method="POST">
+          
+        <input type="radio" id="5" name="spendenbetrag" value="5" required>
+        <label for="5">5€</label><br>
+
+        <input type="radio" id="20" name="spendenbetrag" value="20" required>
+        <label for="20">20€</label><br>
+
+        <input type="radio" id="custom" name="spendenbetrag" value="custom" required>
+        <label for="custom">Custom eingabe (Feld fehlt)</label> <br>
+        <br>
+
+       
+        
+            <input type="radio" id="einmalig" name="dauer" value="einmalig" required>
+            <label for="einmalig">Einmalige Spende</label> <br>
+            <input type="radio" id="monatlich" name="dauer" value="monatlich" required>
+            <label for="monatlich">Monatliche Spende</label> <br>
+
+            <button type="submit">Jetzt Spenden!</button> 
+        
+        </form>
+
+        </p>
+  
         </div>     
     </body>
 
