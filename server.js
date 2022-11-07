@@ -120,6 +120,9 @@ app.get("/styles", function(req,res) {
     res.sendFile(__dirname + "/sites/style.css");
 });
 
+//Zugriff auf images-folder
+app.use(express.static(__dirname + "/images"));
+
 
 //Post-Request, vergleich User-Input mit Datenbank
 /*eventuell weiteres mit registrierung anlegen - falls ein user zb. schon existiert?
