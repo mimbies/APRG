@@ -2,10 +2,9 @@
 <html>
     <head> 
 
-        <title> Hands and Paws - Login </title>
+        <title> Hands and Paws - Registrierung  </title>
        
-        <link rel="stylesheet" type="text/css" href="/css"/>        <!--- evtl anpassen falls wir den namen ändern!-->
-
+        <link rel="stylesheet" type="text/css" href="/css"/>
 
     </head>
 
@@ -36,26 +35,27 @@
      </nav>
 
 
-     
-     <div class="welcome-text">   
-     <h1> Login </h1>
+     <div class="welcome-text"> 
+        <h2> Neuen Benutzer registieren </h2>
 
-        <form action="/login" method="POST">
-        
+        <form action="/registrierung" method="POST">
+
           
+           
               <label for="benutzername"><b>Benutzername: </b></label> <br>
               <input type="text" placeholder="Benutzernamen eingeben" name="benutzername" required>
                 <br>
               <label for="passwort"><b>Passwort:    </b></label><br>
               <input type="text" placeholder="Passwort eingeben" name="passwort" required>
                     <br> <br>
-              
-                    <button type="submit">Login</button> 
+                    <button type="submit">Jetzt neu registieren</button> 
                     <br>
-                    <a href="/registrierung"> Ich habe noch keinen Account </a>
+                    <a href="/login"> Ich bin schon registriert </a>
                     <br> <br>
+          
+
           </form>
-        </div> 
+
         
 
     </body>
