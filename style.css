@@ -297,3 +297,16 @@ input {
     font-weight: 50;
  
 }
+
+.column {
+    float: left;
+    text-align: left;
+    width: 50%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
