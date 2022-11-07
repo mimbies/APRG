@@ -1,6 +1,15 @@
-//Zugriff auf website mit : http://localhost:3000/login
+//APRG, MS2, Team K
+//Webseite: Hands & Paws
 
-//später: http://localhost:3000/startseite!
+//Michelle Koops, 
+//Emma Ließ, 2651620
+//Célina Mae Berbig, 
+
+//AUSGABE HIER: http://localhost:3000/start
+
+
+//ZUGRIFF HIER: http://localhost:3000/login
+
 // FEHLT: Sessions, Cookies, Login-Confirmation mit Datenbank, die Datenbank selbst
 //ALL-CAPS MUSS ERSETZT WERDEN!
 //am liebsten bei variablen nicht mit Großbuchstaben arbeiten, damit wir nirgends durcheinander kommen!!
