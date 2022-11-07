@@ -83,6 +83,19 @@ nav {
     filter: invert(1);
 }
 
+/* imagepreview */
+.imagepreview {
+    display: flex;
+  align-items: center;
+  justify-content: center
+
+}
+.imagepreview img {
+    max-width: 20%;
+    clip-path: circle();
+
+}
+
 /* allgemein */
  body {
     width: 80%;
