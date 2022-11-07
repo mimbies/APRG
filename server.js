@@ -116,7 +116,7 @@ app.get("/spenden_4", function(req,res) {
 
 
 //Zugriff auf CSS-Dateien
-app.get("/styles", function(req,res) {
+app.get("/css", function(req,res) {
     res.sendFile(__dirname + "/sites/style.css");
 });
 
