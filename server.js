@@ -117,11 +117,7 @@ app.get("/css", function(req,res) {
 //Zugriff auf images
 app.use(express.static(__dirname + "/images"));
 
-/*Post-Request Spenden 3 buttons
-app.post("/spenden_3", function(req,res){
-    res.sendFile(__dirname + "/views/spenden_4.html");
-});
-*/
+
 
 //Post-Request Spenden 3 buttons
 app.post("/spenden_3", function(req,res){
@@ -131,4 +127,36 @@ app.post("/spenden_3", function(req,res){
     res.render("spenden_4",{"spendenbetrag": spendenbetrag, "dauer":dauer});
     
 
+})
+
+
+
+
+
+
+//Post-Request, vergleich User-Input mit Datenbank
+app.post("/registrierung", function(req,res){
+    const benutzername = req.body.benutzername;
+    const passwort = req.body.passwort;
+    const email = req.body.email;
+    db.prepare('insert into benutzer (benutzername, email, passwort) values = (?, ?, ?) ;').get(benutzername,email,passwort);
+    res.render("erfolg");
+}) 
+
+//Post-Request
+app.post("/login", function(req,res){
+    const benutzername = req.body.benutzername;
+    const passwort = req.body.passwort;
+    const row = db.prepare('select * from benutzer where benutzername = ?;').get(benutzername);
+    //Wenn der eingegebene Benutzername nicht gefunden wird:
+    if (row == undefined){
+        return res.render("fehlermeldung");
+    }
+    //Wenn das eingegebene Passwort mit dem aus der Tabelle (und dem Benutzernamen) übereinstimmt:
+    if(passwort == row.passwort){
+        return res.render("erfolg");
+    }
+    else{
+        res.render("fehlermeldung");
+        } 
 })
