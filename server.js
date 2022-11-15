@@ -134,14 +134,19 @@ app.post("/spenden_3", function(req,res){
 
 
 
-//Post-Request, vergleich User-Input mit Datenbank
+//Post-Request,registrierung
 app.post("/registrierung", function(req,res){
-    const benutzername = req.body.benutzername;
-    const passwort = req.body.passwort;
-    const email = req.body.email;
-    db.prepare('insert into benutzer (benutzername, email, passwort) values = (?, ?, ?) ;').get(benutzername,email,passwort);
-    res.render("erfolg");
-}) 
+    const param_benutzername = req.body.benutzername;
+    const param_passwort = req.body.passwort;
+    const param_email = req.body.email;
+    rows = db.prepare("SELECT * FROM benutzer WHERE benutzername = ?").all(param_benutzername);
+    if (rows.length == 0) {
+        /*const hash = bcrypt.hashSync(param_passwort, 10);*/
+        const info = db.prepare("INSERT INTO benutzer(benutzername, email, passwort) VALUES (?, ?, ?)").run(param_benutzername,param_email,param_passwort);
+        res.render("erfolg");
+    };
+    
+    })
 
 //Post-Request
 app.post("/login", function(req,res){
