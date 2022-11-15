@@ -289,7 +289,7 @@ label {
 
 input { 
     text-align: left;
-    color: var(--white);
+    color: var(--dark);
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     
