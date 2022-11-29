@@ -195,6 +195,10 @@ app.get("/css_kontakt", function(req,res) {
     res.sendFile(__dirname + "/views/kontakt_style.css");
 });
 
+app.get("/css_spenden1", function(req,res) {
+    res.sendFile(__dirname + "/views/spenden1.css");
+});
+
 
 //Zugriff auf images
 app.use(express.static(__dirname + "/images"));
