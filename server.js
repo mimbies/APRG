@@ -187,6 +187,15 @@ app.get("/css", function(req,res) {
     res.sendFile(__dirname + "/views/style.css");
 });
 
+app.get("/css_about", function(req,res) {
+    res.sendFile(__dirname + "/views/about_style.css");
+});
+
+app.get("/css_kontakt", function(req,res) {
+    res.sendFile(__dirname + "/views/kontakt_style.css");
+});
+
+
 //Zugriff auf images
 app.use(express.static(__dirname + "/images"));
 
