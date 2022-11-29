@@ -1,0 +1,244 @@
+/* fonts runterladen */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Oxygen&family=Poiret+One&family=Roboto:wght@100;300&display=swap');
+
+/* farben */
+:root {
+    --white: #ffffff;
+    --dark: rgb(33, 36, 37);
+    --highlight: rgb(17, 186, 212);
+    --light: rgba(255, 255, 255, 0.563);
+}
+
+/* allgemein */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+
+/* navigationsbar */
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+   
+    background-color: var(--dark);
+    padding: 17px 32px;
+    padding-bottom: 21px;
+}
+
+.menu {
+    display: none;
+    flex: 1 1 0%; 
+    justify-content: flex-end;
+    margin: 0 -16px;
+}
+
+.menu a {
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0 16px;
+    font-weight: 520;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+
+.menu a.currently-active {
+    background-color: var(--light);
+}
+
+.menu a:hover {
+    background-color: var(--highlight);
+}
+
+@media (min-width: 850px) {
+    .menu {
+        display: flex; 
+    }
+}
+
+/* logo */
+.logo img {
+    width: 49px;
+    float: left;
+    margin-bottom: -7%;
+    position: center;
+    margin-right: 17px;
+
+    filter: invert(1);
+}
+
+/* allgemein */
+ body {
+    width: 80%;
+    margin: 0 auto;
+    
+    
+    color: var(--white);
+    hyphens: auto;
+
+    background-color: var(--light);
+    background-attachment: fixed; /* hintergrund bleibt auch beim scrollen gleich */
+    height: 210vH;
+    min-height: fit-content;
+    max-height: max-content;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    
+ }      
+
+/* page-sections */
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vH;
+   
+   
+}
+
+   .headline {
+    color: var(--white); 
+    font-size: 39px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 910;
+    letter-spacing: 10px;
+    }
+
+    .welcome-text {
+    position: absolute;
+    text-align: center;
+
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }   
+
+    .welcome-text h2 {
+    text-align: center;
+    color: var(--dark); 
+    font-family: 'Oswald', sans-serif;
+    
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    font-weight: 300;
+    text-transform: uppercase; 
+   }
+
+   .welcome-text h3 {
+    text-align: center;
+    color: var(--dark); 
+    font-family: 'Poiret One', cursive;
+    
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase; 
+   }
+
+   .text-highlight {
+    font-family: 'Poiret One', cursive;
+    font-size: 45px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    text-transform: uppercase; 
+   }
+
+   .text-highlight2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 500;
+   }
+
+   .text-highlight3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 17px;
+    font-style: none;
+    font-weight: bold;
+    
+   }
+
+    .welcome-text p {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--dark);
+        text-align: center;
+        text-align-last: none;
+        line-height: 28px;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    /* buttons  */
+   
+
+    
+    .smallContainer {
+        padding: 10px 25px;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.134);
+
+        text-align: center;
+        line-height: 28px;
+        font-weight: 400;
+        font-size: 18px;
+        display: inline-block;
+        color: var(--white);
+       }
+
+
+ /* imagepreview für tiere */
+ .imagepreview {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+}
+.imagepreview img {
+    
+    max-width: 20%;
+    clip-path: circle();
+
+}
+
+/* buttons: Mehr Details */
+.welcome-text a {
+    border: 1px solid var(--dark);
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--dark);
+   }
+
+   .welcome-text a:hover {
+    cursor: pointer;
+    background-color: rgba(43, 43, 43, 0.065);
+   
+   }
