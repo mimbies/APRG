@@ -93,7 +93,7 @@ nav {
     hyphens: auto;
 
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("squirrel.jpg");
-    background-attachment: fixed; /* hintergrund bleibt auch beim scrollen gleich */
+    background-attachment: content; /* hintergrund bewegt sich mit dem content */
     height: 110vH;
     background-size: cover;
     background-position: center center;
