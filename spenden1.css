@@ -92,7 +92,7 @@ nav {
     color: var(--white);
     hyphens: auto;
 
-    background-color: var(--light);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("Fische.png.jpg");
     background-attachment: content; /* hintergrund bewegt sich mit dem content */
     height: 210vH;
     min-height: fit-content;
